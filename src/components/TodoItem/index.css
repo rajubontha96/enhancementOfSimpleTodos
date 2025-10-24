@@ -1,25 +1,66 @@
-/* Write your CSS here */
 .todo-item {
   display: flex;
-  justify-content: space-between;
   align-items: center;
+  justify-content: space-between;
   margin-bottom: 18px;
+  gap: 12px;
 }
 
 .todo-title {
   font-family: 'Open Sans';
   font-size: 16px;
   color: #000000;
+  flex: 1;
+}
+
+.todo-title.completed {
+  text-decoration: line-through;
+  color: #888888;
+}
+
+.edit-input {
+  flex: 1;
+  padding: 4px 8px;
+  font-size: 16px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  outline: none;
+}
+
+.button-group {
+  display: flex;
+  gap: 8px;
+}
+
+.edit-button,
+.delete-button {
+  background-color: transparent;
+  border-radius: 6px;
+  padding: 6px 12px;
+  font-family: 'Roboto';
+  font-size: 14px;
+  cursor: pointer;
+  outline: none;
+}
+
+.edit-button {
+  background-color: #ffc107;
+  border: 1px solid #ffc107;
+  color: #000;
+}
+
+.edit-button:hover {
+  background-color: #ffb300;
+  border-color: #ffb300;
 }
 
 .delete-button {
   background-color: transparent;
   color: #ff0b37;
   border: 1px solid #ff0b37;
-  border-radius: 6px;
-  padding: 6px 12px;
-  cursor: pointer;
-  font-family: 'Roboto';
-  font-size: 14px;
-  outline: none;
+}
+
+.delete-button:hover {
+  background-color: #ff0b37;
+  color: white;
 }
